@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    overflow-x: hidden;
+}
+header{
+    background-color: #222d33;
+    height: 70px;
+    color: #fff;
+    box-shadow:0px 9px 8px 0px rgba(226, 5, 5, 0.75);
+}
+.header{
+    max-width: 1140px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center; /* centraliza os itens */
+}
+.logo{
+    width: 100px;
+}
+.logo img{
+    width: 140px;
+}
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Colocar menu no final da tela*/
+}
+.menu ul,
+.menu li{
+    list-style: none; /*Tirar bolinhas do lado da lista*/
+}
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+    align-items: center;
+    border-bottom: 5px solid #222d33;
+}
+.menu li a:hover{
+    color: #88989f;
+}
+.menu-opener{
+    display: none;
+}
+.banner{
+    height: calc(100% - 70px);/*Faz o banner pegar o tamnho do monitor do usuario (100vh é 0 valor total e 100px é o valor do header)*/
+    background-color: #000;
+    background-image: url(Assets/images/fundo.jpg);
+    background-size: cover; /*Imagem fica do tamanho correto*/
+    overflow: hidden; /* overflow: hidden:::Tudo que passar do tamanho, ele simplesmente ignora*/
+}
+
+.opacity{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    max-height: 170vh;
+    display: inline-block;
+}
+.area-textos{
+    width: 650px;
+    margin-left: 40px;
+    margin-top: 70px;
+    color: #fff;
+    text-align: justify;
+}
+.area-textos h2{
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+.line{
+    background-color: #88989f;
+    width: 30px;
+    height: 1.5px;
+    margin-bottom: 25px;
+}
+.area-textos h1{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.area-textos p{
+    font-size: 17px;
+    line-height: 28px;
+}
+.button{
+    display: inline-block;
+    background-color: #E50914;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 35px;
+    margin-top: 55px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.button:hover{
+    box-shadow: #202d33 0px 5px 15px;
+    transform: scale(1.10)
+}
+.banner-ragnar img{
+    width: 600px;
+}
+
+.ragnar-foto{  
+    height: 100%;
+    width: 100px;
+}
+.ragnar-foto img{
+    width: 550px;
+    margin-top: -639px;
+    margin-left: 800px;
+}
+.ragnar-foto img:hover{
+    transform: scale(1.01);
+    transition: 500ms linear;
+}
+.banner-videos{
+    display: flex;
+    margin-top: 20px;
+}
+.banner-videos video{
+    width: 600px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.banner-videos img{
+    width: 160px;
+    border-radius: 10px;
+}
+.banner-videos img:hover{
+    transform: scale(1.15);
+    box-shadow: #202d33 0px 5px 15px;
+    transition: 1s linear;
+}
+
+.banner-videos a{
+    width: 190px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+.banner-videos .lord-ragnar{
+    width: 136px;
+}
+
+.modalDialog {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    overflow: scroll; /* só ativa o scroll se o conteúdo do modal for cumprido */
+  }
+  
+  .modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+  } 
+  
+  .modalDialog > div {
+    width: 600px;
+    position: relative;
+    margin: 150px auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+  }
+  
+  .close {
+    background: #606061;
+    padding: 06px;
+    color: #fff;
+    font-size: 23px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 05px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+  
+  .close:hover { 
+    background: #88989f; 
+  }
+
+
+
+@media (min-width:450px) and (max-width:800px) {
+    .menu-opener{
+        width: 45px;
+        margin-right: 15px;
+        display: block;
+    }
+    .logo{
+        margin-left: 
+        15px;
+    }
+    nav{
+        position: absolute;
+        z-index: 99;
+        background-color: rgb(32, 45, 51, 0.7);
+        width: 30vw;
+        height: calc(100vh - 500px);
+        top: 70px;
+        right: 0;
+    }
+
+    .menu ul{
+        
+        flex-direction: column;
+    }
+    .menu li a {
+        font-weight: bold;
+        font-size: 23px;
+        border-bottom: none;
+        margin-left: -05px;
+    }
+    .menu li{
+        margin: 20px 0;
+    }
+
+
+    .banner{
+        height: calc(100vh - 70px);/*Faz o banner pegar o tamnho do monitor do usuario (100vh é 0 valor total e 100px é o valor do header)*/
+        background-color: #000;
+        background-image: url(Assets/images/fundo.jpg);
+        background-size: cover; /*Imagem fica do tamanho correto*/
+        overflow: hidden; /* overflow: hidden:::Tudo que passar do tamanho, ele simplesmente ignora*/
+    }
+    
+    .opacity{
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100vw;
+        max-height: 170vh;
+        display: inline-block;
+    }
+
+
+    .banner-videos{
+        flex-wrap: wrap;
+    }
+    .banner-videos img{
+        width: 200px;
+        border-radius: 10px;
+        margin-top: 25px;
+    }
+
+    .banner-videos a{
+        margin-right: 25px;
+    }
+
+    .ragnar-foto img{
+        width: 400px;
+        margin-top: -439px;
+        margin-left: 450px;
+    }
+    .banner-videos .lord-ragnar{
+        width: 200px;
+        height: 115px;
+    }
+    .area-textos{
+        width: 480px;
+        margin-left: 40px;
+        margin-top: 70px;
+        color: #fff;
+        text-align: justify;
+
+    }
+}
+
+@media (max-width:450px) {
+    .menu-opener{
+        display: block;
+        width: 30px;
+        margin-right: 20px;
+    }
+    .logo img{
+        width: 90px;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgb(32, 45, 51, 0.7);
+        width: 40vw;
+        height: calc(100vh - 400px);
+        top: 70px;
+        right: 0;
+    }
+    .menu ul{
+        
+        flex-direction: column;
+    }
+    .menu li a {
+        font-weight: bold;
+        font-size: 15px;
+        border-bottom: none;
+        margin-left: -05px;
+    }
+    .menu li{
+        margin: 20px 0;
+    }
+    .area-textos{
+        width: 280px;
+        margin-left: 65px;
+        margin-top: 70px;
+        color: #fff;
+        text-align: justify;
+
+    }
+    .area-textos h2{
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+    .area-textos h1{
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .area-textos p{
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .button{
+        display: inline-block;
+        background-color: #E50914;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px 25px;
+        margin-top: 55px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+
+    .banner-videos{
+        width: 400px;
+        flex-wrap: wrap;
+    }
+    .banner-videos img{
+        width: 120px;
+        border-radius: 10px;
+    }
+    .banner-videos .lord-ragnar{
+        width: 120px;
+        height: 67.5px;
+    }
+
+    .banner-videos a{
+        margin-right: -35px;
+        
+    }
+
+}
