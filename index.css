@@ -249,7 +249,7 @@ header{
         background-color: #000;
         background-image: url(Assets/images/fundo.jpg);
         background-size: cover; /*Imagem fica do tamanho correto*/
-        overflow: hidden; /* overflow: hidden:::Tudo que passar do tamanho, ele simplesmente ignora*/
+        overflow: auto; /* overflow: hidden:::Tudo que passar do tamanho, ele simplesmente ignora*/
     }
     
     .opacity{
@@ -257,6 +257,7 @@ header{
         width: 100vw;
         max-height: 170vh;
         display: inline-block;
+        overflow: auto;
     }
 
 
